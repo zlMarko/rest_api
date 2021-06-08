@@ -1,0 +1,6 @@
+decorator
+Django
+django-crispy-forms
+django-allauth
+cx_oracle
+
