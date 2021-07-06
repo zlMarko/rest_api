@@ -16,9 +16,14 @@ class Piloto(models.Model):
         ordering = ['rut']
 
 
-class Consutor(models.Model):
+class Consultor(models.Model):
     rut = models.CharField(primary_key=True, null=False, default=None, max_length= 10)
+    nombre = models.CharField(null=False, default = None, max_length = 250)
+    apellido = models.CharField(null=False, default = None, max_length = 250)
     password = models.CharField(null= False, default=None, max_length=250)
+    class Meta:
+        db_table = 'consultor'
+        ordering = ['rut']
 
 
 class Licencia(models.Model):
@@ -75,3 +80,35 @@ class Componente(models.Model):
     class Meta:
         db_table = 'Componente'
         ordering = ['id']
+
+
+
+class Reporte(models.Model):
+    aeronave = models.ForeignKey(Aeronave, on_delete=models.CASCADE, related_name='reporte', default=None)
+    fecha_mantencion = models.DateField(auto_now=False, auto_now_add=False, default = None);
+    detalle_mantencion = models.CharField(null = False, default=None, max_length = 300)
+    encargado_mantenimiento = models.CharField(null = False, default=None, max_length = 250)
+    horas_vuelo = models.IntegerField(default=0, null=False)
+
+    class Meta:
+        db_table = 'reportes'
+        ordering = ['id']
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

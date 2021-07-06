@@ -4,7 +4,11 @@
     <list default="true" id="4cb825bd-2c4d-4628-be0a-8b910d70362d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/aeronautica/aeronautica/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/aeronautica/aeronautica/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/aeronautica/aeronautica/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/aeronautica/aeronautica/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aeronautica/apirest/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/aeronautica/apirest/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aeronautica/apirest/api/api_aeronaves.py" beforeDir="false" afterPath="$PROJECT_DIR$/aeronautica/apirest/api/api_aeronaves.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aeronautica/apirest/api/routers.py" beforeDir="false" afterPath="$PROJECT_DIR$/aeronautica/apirest/api/routers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aeronautica/apirest/api/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/aeronautica/apirest/api/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aeronautica/apirest/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/aeronautica/apirest/api/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aeronautica/apirest/api/vuelos_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/aeronautica/apirest/api/vuelos_views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/aeronautica/apirest/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/aeronautica/apirest/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,7 +27,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../../../../Marco Cosas/ProgrammingHere/Python/Curso de python/Curso de nate" />
   </component>
   <component name="RunManager">
     <configuration name="h4x0rrscript" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">

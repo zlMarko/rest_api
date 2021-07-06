@@ -43,11 +43,46 @@ class AeronaveSerializer(serializers.ModelSerializer):
 
 
 
+class AeronaveAvailableSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Aeronave
+        fields =  ['matricula', 'modelo', 'horas_vuelo']
+
 class VueloSerializer(serializers.ModelSerializer):
     class Meta:
         model = Vuelo
         fields = '__all__'
 
+class ReporteSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Reporte
+        fields = '__all__'
 
+class ConsltorSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Consultor
+        fields = '__all__'
+
+    def create(self, validated_data):
+        consultor = Consultor(**validated_data)
+        encryp = sha1_generator.get_hash(validated_data['password'])
+        consultor.password = encryp
+        consultor.save();
+        return consultor
+
+class ConsultoListSerializer(serializers.ModelSerializer):
+        
+    class Meta:
+        model = Consultor
+        fields = '__all__'
+
+    def to_representation(self, instance):
+
+        data = super().to_representation(instance)
+        return{
+            'rut':instance['rut'],
+            'nombre':instance['nombre'],
+            'apellido':instance['apellido'],
+        }
 
 

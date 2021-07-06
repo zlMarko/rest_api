@@ -3,8 +3,6 @@ from .serializers import *
 from apirest.models import *
 
 
-
-
 class VueloSViewSet(viewsets.ModelViewSet):
 
     serializer_class = VueloSerializer

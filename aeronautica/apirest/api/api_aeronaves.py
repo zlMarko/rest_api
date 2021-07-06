@@ -54,3 +54,17 @@ def aeronave_detail_view(request, matricula):
             aeronave.delete()
             return Response({'message': 'Aeronave Eliminado'}, status=status.HTTP_200_OK)
     return Response({'message': 'No se ha encontrado la aeronave'}, status=status.HTTP_400_BAD_REQUEST)
+
+@api_view(['GET'])
+def aeronave_available(request):
+
+    #query
+    aeronave = Aeronave.objects.all().filter(disponible = True)
+    #validation
+    if aeronave:
+        if request.method == 'GET':
+            aeronave_serializer = AeronaveAvailableSerializer(aeronave, many=True)
+            return Response(aeronave_serializer.data, status=status.HTTP_200_OK)
+    return Response({'message': 'error'}, status=status.HTTP_400_BAD_REQUEST)
+
+
